@@ -1,17 +1,24 @@
 import React from 'react'
+import { forwardRef, useImperativeHandle, useRef } from 'react';
 
 
+export const ChildComponent = forwardRef((props, ref) => {
 
-const SayHelloChild = () => {
-    debugger;
-    alert("hello from function child ");
-}
+    useImperativeHandle(ref, () => ({
+        childFunction1() {
+            alert('child function 1 called');
+        }
+        // childFunction2() {
+        //     alert('child function 2 called');
+        // },
+    }));
 
-export const ChildComponent = (props) => {
     return (
         <div>
+            <h2>child content</h2>
+
             <button onClick={props.SayHello1}> SAY HELLO!</button>
             <button onClick={props.SayHello2}> SAY HELLO2!</button>
         </div>
-    )
-}
+    );
+});
