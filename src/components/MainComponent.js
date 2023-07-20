@@ -3,12 +3,12 @@ import { ChildComponent } from './ChildComponent'
 
 
 export const SayHello = () => {
-    alert("hello people!!");
+    alert("hello from function from main (1)");
 }
 
 
 export const SayHello2 = () => {
-    alert("hello people2!!");
+    alert("hello from function from main (2)");
 }
 export const MainComponent = (props) => {
     return (

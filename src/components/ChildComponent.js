@@ -4,7 +4,7 @@ import React from 'react'
 
 const SayHelloChild = () => {
     debugger;
-    alert("say hello child!");
+    alert("hello from function child ");
 }
 
 export const ChildComponent = (props) => {
